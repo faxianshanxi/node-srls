@@ -1,6 +1,6 @@
 {
   "name": "node-srls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "run length of strings",
   "main": "index.js",
   "scripts": {
