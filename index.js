@@ -26,6 +26,7 @@ function runLengthArrayOf(input) {
     }
     return runArray;
 }
+
 function runLengthStringOf(input) {
     return runLengthArrayOf(input).join('');
 }

@@ -1,0 +1,28 @@
+{
+  "name": "node-srls",
+  "version": "1.0.0",
+  "description": "run length of strings",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faxianshanxi/node-srls.git"
+  },
+  "keywords": [
+    "run-length",
+    "run-length-encoding",
+    "encoding",
+    "string-run-length",
+    "string",
+    "run",
+    "length"
+  ],
+  "author": "Faxian",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faxianshanxi/node-srls/issues"
+  },
+  "homepage": "https://github.com/faxianshanxi/node-srls#readme"
+}
