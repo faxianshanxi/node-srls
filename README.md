@@ -1,5 +1,5 @@
 # node-srls
-node string run length string
+node string-run-length string
 
 Do you want to get the run length of a string? Use this package.
 

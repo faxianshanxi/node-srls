@@ -29,7 +29,7 @@ function runStringTestCases(testCase) {
     console.log(output, expected === actual);
 }
 
-function runArrayTestCases(testCase, action) {
+function runArrayTestCases(testCase) {
     var expected = testCase.output;
     var actual = nsrls.runLengthArrayOf(testCase.input);
     var output = 'expected: ' + JSON.stringify(expected) + ', actual: ' + JSON.stringify(actual);
@@ -40,7 +40,33 @@ function runArrayTestCases(testCase, action) {
     console.log(output, okay);
 }
 
+var testCasesAnalyze = [
+  {
+    input: 'aaaaaa',
+    output: {
+      lengths: {
+        old: 6,
+        run: 2,
+        diff: 4
+      },
+      strings: {
+        old: 'aaaaaa',
+        run: 'a5'
+      },
+      benefit: true
+    }
+  }
+];
+
+function runAnalyzeTestCases(testCase) {
+  var expected = testCase.output;
+  var actual = nsrls.analyze(testCase.input);
+  var output = 'expected: ' + JSON.stringify(expected) + ', actual: ' + JSON.stringify(actual);
+  console.log(output);
+}
+
 module.exports = function () {
     testCasesString.forEach(runStringTestCases);
     testCasesArray.forEach(runArrayTestCases);
+    testCasesAnalyze.forEach(runAnalyzeTestCases);
 };

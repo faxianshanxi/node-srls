@@ -1,3 +1,5 @@
+var Analysis = require('./Analysis').Analysis;
+
 function shouldLoop(i, length) {
     // We are checking for equality
     // since the last element is not tested
@@ -12,9 +14,9 @@ function runLengthArrayOf(input) {
     var prev = charArray[0];
     var count = 1;
     var length = charArray.length
-    while(shouldLoop(i, length)) {
+    while (shouldLoop(i, length)) {
         var curr = charArray[i];
-        if(curr === prev) {
+        if (curr === prev) {
             count++;
         } else {
             runArray.push(prev);
@@ -31,7 +33,13 @@ function runLengthStringOf(input) {
     return runLengthArrayOf(input).join('');
 }
 
+function analyze(input) {
+    var runLengthString = runLengthStringOf(input);
+    return new Analysis(input, runLengthString);
+}
+
 module.exports = {
     runLengthStringOf: runLengthStringOf,
-    runLengthArrayOf: runLengthArrayOf
+    runLengthArrayOf: runLengthArrayOf,
+    analyze: analyze
 };
